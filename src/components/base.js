@@ -5,15 +5,12 @@ module.exports = document.registerElement(
             HTMLElement.prototype, {
 
                 createdCallback: {value: function() {
-                    console.log('here I am ^_^ ');
-                    console.log('with content: ', this.textContent);
-                    this.addEventListener("click", function(){
-                        alert(this.getAttribute("is"));
-                    })
+                    //console.log('here I am ^_^ ');
+                    //console.log('with content: ', this.textContent);
                 }},
                 attachedCallback: {value: function() {
                     console.log(this.getAttribute("is") + 'live on DOM ;-) ');
-                }},
+                }}, 
                 detachedCallback: {value: function() {
                     console.log('leaving the DOM :-( )');
                 }},

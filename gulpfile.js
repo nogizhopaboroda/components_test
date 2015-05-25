@@ -11,7 +11,8 @@ gulp.task('scripts', function() {
     // Single entry point to browserify 
   gulp.src('src/app.js')
     .pipe(browserify({
-      insertGlobals : true
+      insertGlobals : true,
+      transform: ['cssify']
     }))
     .pipe(gulp.dest('./build/js'))	
 });
