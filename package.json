@@ -1,0 +1,17 @@
+{
+  "name": "components_test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "document-register-element": "^0.3.0",
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "lodash": "^3.9.2"
+  }
+}
