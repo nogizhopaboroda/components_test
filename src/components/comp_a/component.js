@@ -11,6 +11,8 @@ module.exports = document.registerElement(
         prototype: Object.create(
             baseElement.prototype, {
 
+                template: {value: require('../../../tpl.js')},
+
                 blink: {value: function(){
                     var self = this;
                     this.style.background = 'red';

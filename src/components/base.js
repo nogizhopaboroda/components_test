@@ -1,3 +1,5 @@
+var pc   = require("paperclip");
+
 module.exports = document.registerElement(
     'base-element',
     {
@@ -5,9 +7,16 @@ module.exports = document.registerElement(
             HTMLElement.prototype, {
 
                 createdCallback: {value: function() {
-                    //console.log('here I am ^_^ ');
-                    //console.log('with content: ', this.textContent);
+                  if(this.template){
+                    this.view = pc.template(this.template).view({"test": "yeah!"});
+                    this.appendChild(this.view.render());
+                  }
                 }},
+
+                foo: {value: function(prop){
+                  this.view.bind(prop);
+                }},
+
                 attachedCallback: {value: function() {
                     console.log(this.getAttribute("is") + 'live on DOM ;-) ');
                 }}, 
